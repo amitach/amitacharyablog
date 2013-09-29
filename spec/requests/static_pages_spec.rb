@@ -2,70 +2,34 @@ require 'spec_helper'
 
 describe "StaticPages" do
 	let(:base_title) { "Amit Acharya" }
-  describe "GET /static_pages" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/home'
-      expect(page).to have_content('home')
+
+    subject { page }
+    describe "HelpPages " do
+      before { visit help_path }
+      it {should have_content("help")}
+      it {should have_title("#{base_title} | Help")}
     end
+
+    subject { page }
+    describe "AboutPage" do
+     before {visit about_path}
+     it {should have_content("about")}
+     it {should have_title("#{base_title} | About")}
+   end
+
+   subject{ page }
+   describe "Contact page" do
+    before{ visit contact_path}
+    it{ should have_content("Contact")}
+    it{ should have_title("#{base_title} | Contact")}
   end
 
-
-
-describe "HelpPages" do
-	describe "GET /static_pages" do
-		it "should get the help static page" do
-			visit '/static_pages/help'
-			expect(page).to have_content('help')
-		end
-	end
-end
-
-
-
-describe "AboutPage" do
-	describe "GET /static_pages" do
-		it "should get the about page" do
-			visit '/static_pages/about'
-			expect(page).to have_content('about')
-		end
-	end
-end
-
-
-
-describe "AboutPage" do
-	describe "GET /static_pages" do
-		it "should have the right title" do
-			visit '/static_pages/home'
-			expect(page).to have_title("#{base_title}")
-		end
-	end
-end
-
- describe "Contact page" do
-
-    it "should have the content 'Contact'" do
-      visit '/static_pages/contact'
-      expect(page).to have_content('Contact')
-    end
-
-    it "should have the title 'Contact'" do
-      visit '/static_pages/contact'
-      expect(page).to have_title("#{base_title} | Contact")
-    end
-  end
-
-   describe "Home page" do
-
-    it "should not head in the title " do
-      visit '/static_pages/home'
-      expect(page).not_to have_content('| Home')
-    end
-
-    it "should have the title 'Contact'" do
-      visit '/static_pages/contact'
-      expect(page).to have_title("#{base_title} | Contact")
-    end
+  subject {page}
+  describe "home page" do
+    before { visit root_path}
+    it {should have_content("Amit")}
+    it {should  have_title("#{base_title}")}
+    it {should_not have_content("| Home")}
   end
 end
+
