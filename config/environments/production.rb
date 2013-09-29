@@ -1,4 +1,18 @@
 Blog::Application.configure do
+  
+  ########################MEMCACHE######################
+
+  client = Dalli::Client.new("localhost",
+                           :value_max_bytes => 10485760)
+  config.action_dispatch.rack_cache = {
+    :metastore    => client,
+    :entitystore  => client
+  }
+  config.static_cache_control = "public, max-age=2592000"
+
+  ########################MEMCACHE######################
+
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
