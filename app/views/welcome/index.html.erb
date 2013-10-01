@@ -12,6 +12,7 @@
         <i class="icon-envelope"></i> amitach@gmail.com <br>
         <i class="icon-globe"></i> www.amitacharya.com <br>
         <i class="icon-gift"></i> May 19, 1988
+        <i class="icon-gift"></i> I work as a Software Development Engineer with Infibeam.com
       </p>
     </div>
   </div>
@@ -20,11 +21,31 @@
 
 <div class="center hero-unit">
   <h2>Welcome, Listed below are the blogs</h2>
-  <ol>
-    <li> <%= link_to 'Ruby on Rails, MVC, install ruby and sample rails app', "http://amit-rubyonrails.blogspot.in/" %></li>
-    <li> <%= link_to 'Ruby on Rails, Send emails easily using pony gem', "http://amit-ror-tips.blogspot.in/2013/03/ruby-on-rails-sending-mails-easily.html" %>  </li>
-    <li> <%= link_to 'Using Postfix to relay mails to gmail', "http://postfix-gmail.blogspot.in/2013/03/using-postfix-to-use-gmail-as-smtp-relay.html" %></li>
-  </ol>
+  <ul class="home-page-lists">
+    <li>
+   <img src="http://lorempixum.com/100/100/nature/1" style="float:left; clear:both;">
+    <h3>Ruby on Rails</h3>
+     <%= link_to 'Ruby on Rails, MVC, install ruby and sample rails app', "http://amit-rubyonrails.blogspot.in/" %>
+     <p>At the core of Rails is the Model, View, Controller architecture...</p>
+    </li>
+    <hr>
+    <li>
+    <img src="http://lorempixum.com/100/100/nature/2">
+      <h3>Pony Gem</h3>
+     <%= link_to 'Ruby on Rails, Send emails easily using pony gem', "http://amit-ror-tips.blogspot.in/2013/03/ruby-on-rails-sending-mails-easily.html" %>  
+      <p>Send emails using pony gem</p>
+     </li>
+     <hr>
+    <li>
+     <img src="http://lorempixum.com/100/100/nature/3">
+      <h3>Using Postfix to relay emails to gmail</h3>
+     <%= link_to 'Using Postfix to relay mails to gmail', "http://postfix-gmail.blogspot.in/2013/03/using-postfix-to-use-gmail-as-smtp-relay.html" %>
+      <p>Configure postfix as smtp server to relay emails to gmail</p>
+     </li>
+     <hr>
+  </ul>
   
   <%#= link_to "Sign up now!", '#', class: "sign-up btn btn-large btn-primary" %>
 </div>
+
+
