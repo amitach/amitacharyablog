@@ -20,27 +20,35 @@
 
 
 <div class="center hero-unit">
-  <h2>Welcome, Listed below are the blogs</h2>
+  <h3 style="text-align:left">Technical Blogs</h3>
+  <hr>
   <ul class="home-page-lists">
     <li>
    <img src="http://lorempixum.com/100/100/nature/1" style="float:left; clear:both;">
-    <h3>Ruby on Rails</h3>
+    <h3><%= link_to 'Ruby on Rails', "http://amit-rubyonrails.blogspot.in/" %></h3>
      <%= link_to 'Ruby on Rails, MVC, install ruby and sample rails app', "http://amit-rubyonrails.blogspot.in/" %>
      <p>At the core of Rails is the Model, View, Controller architecture...</p>
     </li>
     <hr>
     <li>
     <img src="http://lorempixum.com/100/100/nature/2">
-      <h3>Pony Gem</h3>
+      <h3><%= link_to 'Pony Gem', "http://amit-ror-tips.blogspot.in/2013/03/ruby-on-rails-sending-mails-easily.html" %>  </h3>
      <%= link_to 'Ruby on Rails, Send emails easily using pony gem', "http://amit-ror-tips.blogspot.in/2013/03/ruby-on-rails-sending-mails-easily.html" %>  
       <p>Send emails using pony gem</p>
      </li>
      <hr>
     <li>
      <img src="http://lorempixum.com/100/100/nature/3">
-      <h3>Using Postfix to relay emails to gmail</h3>
+      <h3><%= link_to 'Postfix to send emails', "http://postfix-gmail.blogspot.in/2013/03/using-postfix-to-use-gmail-as-smtp-relay.html" %></h3>
      <%= link_to 'Using Postfix to relay mails to gmail', "http://postfix-gmail.blogspot.in/2013/03/using-postfix-to-use-gmail-as-smtp-relay.html" %>
       <p>Configure postfix as smtp server to relay emails to gmail</p>
+     </li>
+     <hr>
+     <li>
+     <img src="http://lorempixum.com/100/100/nature/4">
+      <h3><%= link_to 'Metaprogramming Ruby', "http://metaprogrammingruby.blogspot.in/" %></h3>
+     <%= link_to 'MetaProgramming in ruby with concepts like open classes etc', "http://metaprogrammingruby.blogspot.in/" %>
+      <p>Metaprogramming concepts in ruby, open classes...</p>
      </li>
      <hr>
   </ul>
