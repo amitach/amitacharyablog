@@ -1,4 +1,3 @@
-require "bundler/capistrano"
 set :application, 'blog'
 set :repo_url, 'git@github.com:amitach/amitacharyablog.git'
 
