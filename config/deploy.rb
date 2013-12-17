@@ -1,9 +1,10 @@
-set :application, 'amitacharyablog'
+require "bundler/capistrano"
+set :application, 'blog'
 set :repo_url, 'git@github.com:amitach/amitacharyablog.git'
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
- set :deploy_to, '/home/amit/amitacharyablog'
+ set :deploy_to, '/home/amit/app'
  set :scm, :git
 
  set :format, :pretty
